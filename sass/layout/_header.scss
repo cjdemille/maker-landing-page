@@ -1,0 +1,40 @@
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__logo {
+        display: block;
+        margin: 3rem auto;
+    }
+
+    &__text {
+        color: $gray;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    &__img {
+        margin: 2rem auto;
+        display: block;
+    }
+
+    &__content {
+        position: relative;
+
+        // min-height: 40rem;
+    }
+
+    &__illustration {
+        width: 100%;
+        overflow: hidden;
+
+        &--image {
+            width: 110%
+        }
+    }
+}

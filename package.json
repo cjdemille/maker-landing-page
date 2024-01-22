@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass-dev": "sass --watch --update --style=expanded sass/main.scss:css/dev.css",
+    "sass-prod": "sass --no-source-map --style=compressed sass/main.scss:css/style.min.css",
+    "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' css/style.min.css -o css/style.prefix.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.69.7"
+    "autoprefixer": "^10.4.17",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.70.0"
   }
 }

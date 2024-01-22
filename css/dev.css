@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.heading-primary {
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  width: 67%;
+  margin: 3rem auto;
+  text-align: center;
+}
+.heading-primary__callout {
+  color: #3EE9E5;
+}
+
+.heading-secondary {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background-color: #080C20;
+  color: #FFFFFF;
+}
+
+* {
+  border: 1px solid #FF2965;
+}
+
+.pitch {
+  text-align: center;
+}
+.pitch:not(:last-of-type) {
+  margin-bottom: 5rem;
+}
+.pitch__img-box {
+  height: 12rem;
+  width: 12rem;
+  background-color: #093F68;
+  margin: 3rem auto;
+  border-radius: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pitch__img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.pitch__text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  width: 90%;
+  margin: 1rem auto;
+  color: #777F98;
+}
+
+.pricing-plan {
+  background-color: #FF2965;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  border-radius: 2rem;
+  padding: 4rem 2rem 3rem;
+}
+.pricing-plan:not(:last-of-type) {
+  margin-bottom: 5rem;
+}
+.pricing-plan__icon {
+  position: absolute;
+  top: -3rem;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header__logo {
+  display: block;
+  margin: 3rem auto;
+}
+.header__text {
+  color: #777F98;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+.header__img {
+  margin: 2rem auto;
+  display: block;
+}
+.header__content {
+  position: relative;
+}
+.header__illustration {
+  width: 100%;
+  overflow: hidden;
+}
+.header__illustration--image {
+  width: 110%;
+}
+
+.pitches {
+  margin: 10rem auto;
+}
+
+.pricing {
+  margin: 10rem auto;
+}
+.pricing__text {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  width: 90%;
+  margin: 1rem auto;
+  color: #777F98;
+  text-align: center;
+}
+
+/*# sourceMappingURL=dev.css.map */

@@ -1,0 +1,16 @@
+.pitches {
+    margin: 10rem auto;
+}
+
+.pricing {
+    margin: 10rem auto;
+
+    &__text {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        width: 90%;
+        margin: 1rem auto;
+        color: $gray;
+        text-align: center;
+    }
+}
