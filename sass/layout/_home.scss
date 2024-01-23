@@ -14,3 +14,46 @@
         text-align: center;
     }
 }
+
+.notification {
+    padding-bottom: 10rem;
+    font-size: 1.5rem;
+
+    &-form {
+        margin: 3rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__input {
+            margin-bottom: 3rem;
+            font-size: inherit;
+            font-family: inherit;
+            background-color: $blue;
+            width: 90%;
+            border-radius: 3rem;
+            padding: 1rem 2rem;
+            border: none;
+            color: white;
+        }
+
+        &__submit {
+            font-size: inherit;
+            font-family: inherit;
+            color: $navy;
+            background-color: $blue-bright;
+            width: 90%;
+            border-radius: 3rem;
+            padding: 1rem 2rem;
+            transition: all .3s;
+
+
+            &:hover {
+                background-color: transparent;
+                border: 1px solid $blue-bright;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -15,7 +15,16 @@
 
 
 .heading-secondary {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: 800;
     text-align: center;
+    padding: 0 20%;
+
+    &--notification {
+        background: url('../assets/bg-footer-squiggle.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
 }
