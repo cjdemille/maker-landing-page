@@ -1,40 +1,90 @@
 .header {
-    // min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-    &__logo {
-        display: block;
-        margin: 3rem auto;
+  &__logo {
+    display: block;
+    margin: 3rem auto;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 3rem;
+      margin-left: 3rem;
+      margin-bottom: 8rem;
+      width: 15%;
     }
+  }
 
-    &__text {
-        color: $gray;
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        width: 90%;
-        margin: 2rem auto;
+  &__text {
+    color: $gray;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      width: 60%;
     }
+  }
 
-    &__img {
-        margin: 2rem auto;
-        display: block;
-    }
+  &__img {
+    margin: 2rem auto;
+    display: block;
+  }
 
-    &__content {
-        position: relative;
+  &__content {
+    position: relative;
 
-        // min-height: 40rem;
-    }
+    @media screen and (min-width: $tablet) {
+      background: url(../assets/bg-hero-squiggle.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 50%;
+      margin: 0 auto;
 
-    &__illustration {
+      &::before {
+        content: "";
+        background: url("../assets/illustration-hero-left.svg");
+        position: absolute;
+        top: 0;
+        right: 100%;
+        height: 100%;
         width: 100%;
-        overflow: hidden;
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+      }
 
-        &--image {
-            width: 110%
-        }
+      &::after {
+        content: "";
+        background: url("../assets/illustration-hero-right.svg");
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+      }
     }
+    // min-height: 40rem;
+  }
+
+  &__illustration {
+    width: 100%;
+    overflow: hidden;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
+    &--mobile-image {
+      width: 110%;
+    }
+  }
 }

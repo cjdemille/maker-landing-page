@@ -1,74 +1,89 @@
 .pricing-plan {
-    background-color: $error;
-    position: relative;
-    width: 90%;
-    margin: 5rem auto 0;
-    border-radius: 2rem;
-    padding: 4rem 2rem 3rem;
+  background-color: $error;
+  position: relative;
+  width: 90%;
+  margin: 5rem auto 0;
+  border-radius: 2rem;
+  padding: 4rem 2rem 3rem;
 
-    &:not(:last-of-type) {
-        margin-bottom: 5rem;
+  &:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
+
+  &:first-of-type {
+    background-color: $blue;
+  }
+
+  &:first-of-type > &__list {
+    list-style: url("../assets/icon-check-light.svg");
+  }
+
+  &:last-of-type > &__list {
+    list-style: url("../assets/icon-check-dark.svg");
+  }
+
+  &:last-of-type {
+    background-color: $blue-bright;
+    color: $navy;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -3rem;
+  }
+
+  &__header {
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  &__price {
+    font-weight: 800;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &--rate {
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      margin-left: 1rem;
     }
+  }
 
-    &:first-of-type {
-        background-color: $blue;
+  &__list {
+    margin-left: 2rem;
+    // list-style: url('../assets/icon-check.svg');
+  }
+
+  &__list-item {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
     }
+  }
 
-    &:first-of-type>&__list {
-        list-style: url('../assets/icon-check-light.svg');
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
 
+  @media screen and (min-width: $desktop) {
+    margin: 0;
+    width: 45%;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
-
-    &:last-of-type>&__list {
-        list-style: url('../assets/icon-check-dark.svg');
-
-    }
-
-    &:last-of-type {
-        background-color: $blue-bright;
-        color: $navy;
-    }
-
-    &__icon {
-        position: absolute;
-        top: -3rem;
-    }
-
-    &__header {
-        font-weight: 800;
-        font-size: 1.8rem;
-        line-height: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    &__text {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        margin-bottom: 3rem;
-    }
-
-    &__price {
-        font-weight: 800;
-        font-size: 4rem;
-        display: flex;
-        align-items: center;
-
-        &--rate {
-            font-weight: 300;
-            font-size: 1.5rem;
-            line-height: 2.5rem;
-            margin-left: 1rem;
-        }
-    }
-
-    &__list {
-        margin-left: 2rem;
-        // list-style: url('../assets/icon-check.svg');
-    }
-
-    &__list-item {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        ;
-    }
+  }
 }

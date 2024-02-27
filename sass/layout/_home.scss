@@ -1,59 +1,118 @@
 .pitches {
-    margin: 10rem auto;
+  margin: 10rem auto;
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 90em;
+    gap: 2rem;
+  }
 }
 
 .pricing {
-    margin: 10rem auto;
+  margin: 15rem auto;
 
-    &__text {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        width: 90%;
-        margin: 1rem auto;
-        color: $gray;
-        text-align: center;
+  &__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 90%;
+    margin: 1rem auto;
+    color: $gray;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+      width: 50%;
     }
+  }
+
+  &__pricing-plans {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 90em;
+      margin: 6rem auto;
+    }
+  }
 }
 
 .notification {
-    padding-bottom: 10rem;
-    font-size: 1.5rem;
+  padding-bottom: 10rem;
+  font-size: 1.5rem;
+  margin-bottom: 6rem;
 
-    &-form {
-        margin: 3rem auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  @media screen and (min-width: $tablet) {
+    background: url(../assets/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+  }
 
-        &__input {
-            margin-bottom: 3rem;
-            font-size: inherit;
-            font-family: inherit;
-            background-color: $blue;
-            width: 90%;
-            border-radius: 3rem;
-            padding: 1rem 2rem;
-            border: none;
-            color: white;
-        }
+  &__error {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff2965;
 
-        &__submit {
-            font-size: inherit;
-            font-family: inherit;
-            color: $navy;
-            background-color: $blue-bright;
-            width: 90%;
-            border-radius: 3rem;
-            padding: 1rem 2rem;
-            transition: all .3s;
-
-
-            &:hover {
-                background-color: transparent;
-                border: 1px solid $blue-bright;
-                color: $white;
-                cursor: pointer;
-            }
-        }
+    &--hidden {
+      color: transparent;
     }
+  }
+
+  &-form {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__input {
+      margin-bottom: 3rem;
+      font-size: inherit;
+      font-family: inherit;
+      background-color: $blue;
+      width: 90%;
+      border-radius: 3rem;
+      padding: 1rem 2rem;
+      border: none;
+      color: white;
+
+      &:active {
+        border: none;
+      }
+
+      &--error {
+        border: 1px solid #ff2965;
+      }
+    }
+
+    &__submit {
+      font-size: inherit;
+      font-family: inherit;
+      color: $navy;
+      background-color: $blue-bright;
+      width: 90%;
+      border-radius: 3rem;
+      border: none;
+      padding: 1rem 2rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $blue-bright;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      &__input {
+        width: 40%;
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+      &__submit {
+        width: 15%;
+      }
+    }
+  }
 }

@@ -1,10 +1,15 @@
+// MEDIA BREAKPOINTS
+
+$tablet: 48em; //768px;
+$desktop: 75em;
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
-    background-color: $navy;
-    color: $white;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background-color: $navy;
+  color: $white;
+  overflow-x: hidden;
 }

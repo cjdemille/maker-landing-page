@@ -1,30 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
 
 .heading-primary {
-    font-weight: 800;
-    font-size: 3.2rem;
-    line-height: 4rem;
-    width: 67%;
-    margin: 3rem auto;
-    text-align: center;
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  width: 67%;
+  margin: 3rem auto;
+  text-align: center;
 
-    &__callout {
-        color: $blue-bright
-    }
+  &__callout {
+    color: $blue-bright;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 4.8rem;
+  }
 }
 
-
 .heading-secondary {
-    font-size: 2.4rem;
-    font-weight: 800;
-    text-align: center;
-    padding: 0 20%;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 0 20%;
 
-    &--notification {
-        background: url('../assets/bg-footer-squiggle.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
+  &--notification {
+    background: url("../assets/bg-footer-squiggle.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media screen and (min-width: $tablet) {
+      background: none;
     }
+  }
 }

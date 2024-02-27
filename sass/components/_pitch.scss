@@ -1,32 +1,82 @@
 .pitch {
-    text-align: center;
+  text-align: center;
 
+  &:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 0 20%;
+  }
+
+  &__img-box {
+    height: 12rem;
+    width: 12rem;
+    background-color: $blue;
+    margin: 3rem auto;
+    border-radius: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    width: 90%;
+    margin: 1rem auto;
+    color: $gray;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+
+    &__heading {
+      text-align: left;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+    &__text {
+      margin: 0;
+    }
+    &__img-box {
+      margin: 3rem;
+    }
+    &:nth-of-type(odd) {
+      margin-left: 8rem;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
     &:not(:last-of-type) {
-        margin-bottom: 5rem;
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(odd) {
+      margin-left: 0;
+    }
+    &:nth-of-type(even) {
+      transform: translateY(5rem);
     }
 
     &__img-box {
-        height: 12rem;
-        width: 12rem;
-        background-color: $blue;
-        margin: 3rem auto;
-        border-radius: 4.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      margin: 0;
+      margin-bottom: 3rem;
     }
-
-    &__img {
-        width: 50%;
-        margin: 0 auto;
-        display: block;
-    }
-
-    &__text {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        width: 90%;
-        margin: 1rem auto;
-        color: $gray;
-    }
+  }
 }
